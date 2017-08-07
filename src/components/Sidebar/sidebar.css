@@ -1,0 +1,8 @@
+@import "../../styles/vars.css";
+
+.Sidebar{
+  width: 250px;
+  min-height: 100vh;
+  background-color: var(--darkBg);
+  color: var(--darkColor);
+}

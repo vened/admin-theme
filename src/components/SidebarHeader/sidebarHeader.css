@@ -1,0 +1,6 @@
+@import "../../styles/vars.css";
+
+.SidebarHeader{
+  background-color: var(--dangerBg);
+  color: var(--dangerColor);
+}

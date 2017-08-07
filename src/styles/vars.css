@@ -1,0 +1,13 @@
+:root {
+  font-size: 13px;
+
+  --white: rgba(255, 255, 255, 1);
+  --darkBg: #323544;
+  --darkColor: #a1a5ba;
+
+  --dangerBg: #ea5a5a;
+  --dangerColor: #fef8f8;
+}
+
+.defaultTheme {
+}

@@ -6,6 +6,9 @@ function Logo() {
   return (
     <div className="Logo">
       <img src={logo} className="Logo-img" alt="logo" />
+      <div className="Logo-slogan">
+        Admin
+      </div>
     </div>
   );
 }
