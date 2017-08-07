@@ -1,6 +1,7 @@
 @import "../../styles/vars.css";
 
 .SidebarHeader{
-  background-color: var(--dangerBg);
-  color: var(--dangerColor);
+  padding: 8px;
+  background-color: var(--brand-danger);
+  color: var(--brand-danger-text-color);
 }

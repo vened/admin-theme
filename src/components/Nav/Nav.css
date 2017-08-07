@@ -1,0 +1,34 @@
+@import "../../styles/vars.css";
+
+.admin-nav {
+  margin: 0;
+  padding: 16px 0;
+  list-style: none;
+}
+
+.admin-nav-item {
+  color: var(--brand-primary-lighten-text-color);
+}
+
+.admin-nav-item-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--brand-primary-lighten-text-color);
+
+  &:hover {
+    text-decoration: none;
+    background-color: var(--brand-primary) !important;
+    color: var(--brand-primary-text-color);
+  }
+}
+
+.admin-nav-item-icon {
+  margin: 0 10px 0 0;
+  font-size: 18px;
+}
+
+.admin-nav-item-label {
+
+}

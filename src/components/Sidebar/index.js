@@ -1,13 +1,14 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
+import Nav from '../../components/Nav';
 import SidebarHeader from '../../components/SidebarHeader';
+import navData from './navData';
 import './sidebar.css';
 
 function Sidebar() {
   return (
     <div className="Sidebar">
       <SidebarHeader />
-      <FontAwesome name='rocket'/>
+      <Nav data={navData} />
     </div>
   );
 }
