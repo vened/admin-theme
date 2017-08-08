@@ -6,7 +6,7 @@ const navData = [
   },
   {
     label: 'UI',
-    path: '/',
+    path: '/ui',
     faIcon: 'desktop',
   },
   {

@@ -1,7 +1,6 @@
 @import "../../styles/vars.css";
 
 .Sidebar{
-  width: 250px;
   min-height: 100vh;
   background-color: var(--brand-primary-lighten);
   color: var(--brand-primary-lighten-text-color);
