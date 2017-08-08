@@ -1,6 +1,7 @@
 @import "../../styles/vars.css";
 
 .SidebarHeader{
+  height: var(--header-height);
   padding: 8px;
   background-color: var(--brand-danger);
   color: var(--brand-danger-text-color);

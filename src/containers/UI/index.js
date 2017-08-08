@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
+import { setPage } from '../../store/Header/reducer';
 import {
   decrement,
   decrementAsync,
@@ -10,27 +11,37 @@ import {
   incrementAsync,
 } from '../../store/UI/reducer';
 
-function UI(props) {
-  return (
-    <div>
-      <h1>UI</h1>
-      <p>Count: {props.count}</p>
+class UI extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-      <p>
-        <button onClick={props.increment} disabled={props.isIncrementing}>Increment</button>
-        <button onClick={props.incrementAsync} disabled={props.isIncrementing}>Increment Async</button>
-      </p>
+  componentDidMount() {
+    this.props.setPage({currentPage: 'UI'});
+  }
 
-      <p>
-        <button onClick={props.decrement} disabled={props.isDecrementing}>Decrementing</button>
-        <button onClick={props.decrementAsync} disabled={props.isDecrementing}>Decrement Async</button>
-      </p>
+  render() {
+    return (
+      <div>
+        <h1>UI</h1>
+        <p>Count: {this.props.count}</p>
 
-      <p>
-        <button onClick={() => props.changePage()}>Go to about page via redux</button>
-      </p>
-    </div>
-  );
+        <p>
+          <button onClick={this.props.increment} disabled={this.props.isIncrementing}>Increment</button>
+          <button onClick={this.props.incrementAsync} disabled={this.props.isIncrementing}>Increment Async</button>
+        </p>
+
+        <p>
+          <button onClick={this.props.decrement} disabled={this.props.isDecrementing}>Decrementing</button>
+          <button onClick={this.props.decrementAsync} disabled={this.props.isDecrementing}>Decrement Async</button>
+        </p>
+
+        <p>
+          <button onClick={() => this.props.changePage()}>Go to about page via redux</button>
+        </p>
+      </div>
+    );
+  }
 }
 
 UI.propTypes = {
@@ -48,6 +59,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({
   incrementAsync,
   decrement,
   decrementAsync,
+  setPage,
   changePage: () => push('/'),
 }, dispatch);
 

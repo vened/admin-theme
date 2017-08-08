@@ -14,7 +14,10 @@ aside {
   width: 250px;
 }
 
-main {
+.AppMain {
   width: calc(100% - 250px);
+}
+
+main {
   padding: 16px;
 }

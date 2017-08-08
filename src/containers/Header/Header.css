@@ -1,0 +1,12 @@
+@import "../../styles/vars.css";
+
+header {
+  height: calc(var(--header-height) + 1px);
+  padding: 16px;
+
+  border-bottom: 1px solid var(--border-color);
+
+  h1{
+    margin: 0;
+  }
+}
