@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import FontAwesome from 'react-fontawesome';
-import { Link, } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import shortid from 'shortid';
 import './Nav.css';
 
@@ -15,17 +15,22 @@ function Nav(props) {
               className="admin-nav-item"
               key={shortid.generate()}
             >
-              <Link
+              <NavLink
                 to={item.path}
                 className="admin-nav-item-link"
               >
                 <span className="admin-nav-item-icon">
-                  <FontAwesome name={item.faIcon} />
+                  {item.faIcon ? <FontAwesome name={item.faIcon} />
+                    : <FontAwesome name="angle-right" />
+                  }
                 </span>
                 <span className="admin-nav-item-label">
                   {item.label}
                 </span>
-              </Link>
+              </NavLink>
+              {item.children &&
+               <Nav data={item.children} />
+              }
             </li>
           );
         })}

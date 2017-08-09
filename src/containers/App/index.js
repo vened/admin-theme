@@ -1,5 +1,8 @@
 import React from 'react';
-import { Route, } from 'react-router-dom';
+import {
+  Route,
+  Switch,
+} from 'react-router-dom';
 import Sidebar from '../../components/Sidebar';
 import Dashboard from '../../containers/Dashboard';
 import Header from '../../containers/Header';
@@ -14,8 +17,10 @@ const App = () => (
     <div className="AppMain">
       <Header />
       <main>
-        <Route exact path="/" component={Dashboard} />
-        <Route exact path="/ui" component={UI} />
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/ui" component={UI} />
+        </Switch>
       </main>
     </div>
   </div>

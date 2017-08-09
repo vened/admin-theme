@@ -8,6 +8,16 @@ const navData = [
     label: 'UI',
     path: '/ui',
     faIcon: 'desktop',
+    children: [
+      {
+        label: 'General',
+        path: '/ui/general',
+      },
+      {
+        label: 'Buttons',
+        path: '/ui/buttons',
+      },
+    ],
   },
   {
     label: 'Components',

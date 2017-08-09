@@ -3,21 +3,21 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setPage } from '../../store/Header/reducer';
 
-class Dashboard extends PureComponent {
+class UiGeneral extends PureComponent {
   componentDidMount() {
-    this.props.setPage({ currentPage: 'Dashboard' });
+    this.props.setPage({ currentPage: 'UiGeneral' });
   }
 
   render() {
     return (
       <div>
-        Dashboard
+        <h1>UiGeneral</h1>
       </div>
     );
   }
 }
 
-Dashboard.propTypes = {};
+UiGeneral.propTypes = {};
 
 const mapStateToProps = state => ({});
 
@@ -28,4 +28,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Dashboard);
+)(UiGeneral);

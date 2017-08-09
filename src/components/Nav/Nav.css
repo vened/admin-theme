@@ -4,6 +4,14 @@
   margin: 0;
   padding: 16px 0;
   list-style: none;
+
+  .admin-nav {
+    padding: 0;
+
+    .admin-nav-item-link {
+      padding-left: 32px;
+    }
+  }
 }
 
 .admin-nav-item {
