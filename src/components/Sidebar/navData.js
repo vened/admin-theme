@@ -17,6 +17,10 @@ const navData = [
         label: 'Buttons',
         path: '/ui/buttons',
       },
+      {
+        label: 'Components',
+        path: '/ui/components',
+      },
     ],
   },
   {
