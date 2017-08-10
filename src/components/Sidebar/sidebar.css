@@ -2,6 +2,7 @@
 
 .Sidebar{
   min-height: 100vh;
+  height: 100%;
   background-color: var(--brand-primary-lighten);
   color: var(--brand-primary-lighten-text-color);
 }

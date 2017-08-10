@@ -15,11 +15,13 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           #1e202c !default; // #eee
 
-$brand-primary:         #1e202c !default; // #337ab7
-$brand-success:         #5cb85c !default;
-$brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+//$brand-primary:         #1e202c !default; // #337ab7
+//$brand-primary:         #337ab7 !default; // #337ab7 /#1b6985
+$brand-primary:         #1b6985 !default;
+$brand-success:         #3CBC8D !default;
+$brand-info:            #29B7D3 !default;
+$brand-warning:         #FAC552 !default;
+$brand-danger:          #E9422E !default;
 
 
 //== Scaffolding
@@ -27,7 +29,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg:               rgba(0,0,0,.03) !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 

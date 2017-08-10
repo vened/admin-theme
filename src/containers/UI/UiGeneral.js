@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import { Panel } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Col from '../../components/Bootstrap/Col';
@@ -13,7 +14,13 @@ class UiGeneral extends PureComponent {
   render() {
     return (
       <div>
-        <h1>UiGeneral</h1>
+        <Row>
+          <Col size={{ md: 4 }}>
+            <Panel>
+              md9 mdPush3
+            </Panel>
+          </Col>
+        </Row>
         <Row>
           <Col size={{
             md: 9,
