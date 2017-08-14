@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Panels from '../../components/Bootstrap/Panels';
 import { setPage } from '../../store/Header/reducer';
+import { DatePicker } from 'antd';
 
 class UiComponents extends PureComponent {
   componentDidMount() {
@@ -12,6 +13,7 @@ class UiComponents extends PureComponent {
   render() {
     return (
       <div>
+        <DatePicker />
         <Panels />
       </div>
     );
