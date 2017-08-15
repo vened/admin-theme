@@ -1,9 +1,12 @@
-import { Layout, } from 'antd';
+import {
+  Layout,
+  LocaleProvider,
+} from 'antd';
+import enUS from 'antd/lib/locale-provider/en_US';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { Provider, } from 'react-redux';
 import {
-  Link,
   Route,
   Switch,
 } from 'react-router-dom';
@@ -22,38 +25,29 @@ class App extends PureComponent {
     return (
       <Provider store={store}>
         <ConnectedRouter history={history}>
-          <Layout style={{ minHeight: '100vh' }}>
-
-            <AdminHeader />
-
-            <Layout style={{ 'flexDirection': 'row', overflowX: 'hidden' }}>
-              <Sidebar />
-
-              <Layout style={{ height: '100vh' }}>
-                <Content style={{
-                  margin: '0',
-                  padding: '70px 0 0 0',
-                  background: '#fff',
-                  overflow: 'initial',
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    flexFlow: 'row wrap',
-                    alignItems: 'flex-start',
-                    padding: '16px',
+          <LocaleProvider locale={enUS}>
+            <Layout style={{ minHeight: '100vh' }}>
+              <AdminHeader />
+              <Layout style={{ 'flexDirection': 'row', overflowX: 'hidden' }}>
+                <Sidebar />
+                <Layout style={{ height: '100vh' }}>
+                  <Content style={{
+                    margin: '0',
+                    padding: '70px 0 0 0',
+                    background: '#fff',
+                    overflow: 'auto',
                   }}>
-                    <Link to="/ui">UI</Link>
-                    <main>
+                    <main style={{padding: '16px'}}>
                       <Switch>
                         <Route exact path="/" component={Dashboard} />
                         <Route path="/ui" component={UI} />
                       </Switch>
                     </main>
-                  </div>
-                </Content>
+                  </Content>
+                </Layout>
               </Layout>
             </Layout>
-          </Layout>
+          </LocaleProvider>
         </ConnectedRouter>
       </Provider>
     );

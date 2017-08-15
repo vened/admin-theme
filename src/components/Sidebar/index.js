@@ -5,9 +5,10 @@ import {
 } from 'antd';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import FontAwesome from 'react-fontawesome';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import navData from './navData';
+import navData from '../../navData';
 import './sidebar.css';
 
 const SubMenu = Menu.SubMenu;
@@ -28,7 +29,7 @@ class Sidebar extends PureComponent {
         <NavLink
           to={menuItem.path}
         >
-          <Icon type={menuItem.faIcon} />
+          <FontAwesome name={menuItem.faIcon} />
           <span>{menuItem.label}</span>
         </NavLink>
       </Menu.Item>
@@ -57,6 +58,7 @@ class Sidebar extends PureComponent {
   render() {
     return (
       <Sider
+        className="AdminSidebar"
         style={{ left: 0 }}
         width="240"
         collapsedWidth="64"
@@ -64,7 +66,6 @@ class Sidebar extends PureComponent {
         collapsible
         collapsed={this.props.collapsed}
       >
-        <div className="logo" />
         {this.renderMenu()}
       </Sider>
     );

@@ -14,16 +14,11 @@ const { Header } = Layout;
 class AdminHeader extends PureComponent {
   render() {
     return (
-      <Header style={{
-        position: 'fixed',
-        width: '100%',
-        height: '70px',
-        padding: this.props.collapsed ? '0px 31px 0px 80px' : '0px 31px 0px 256px',
-      }}>
+      <Header className="AdminHeader" style={{paddingLeft: this.props.collapsed ? '80px' : '256px',}}>
         <Icon
           type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
           onClick={this.props.toggleCollapsed}
-          style={{ fontSize: 16, color: '#fff' }}
+          style={{ fontSize: 16 }}
         />
       </Header>
     );

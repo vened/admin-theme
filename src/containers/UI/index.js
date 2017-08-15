@@ -3,18 +3,19 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import UiBadge from './UiBadge';
 import UiBase from './UiBase';
-import UiGeneral from './UiGeneral';
 import UiComponents from './UiComponents';
+import './ui.css';
 
 const UI = () => {
   return (
     <Switch>
       <Route exact path="/ui" component={UiBase} />
-      <Route path="/ui/general" component={UiGeneral} />
+      <Route path="/ui/badge" component={UiBadge} />
       <Route path="/ui/components" component={UiComponents} />
     </Switch>
-  )
+  );
 };
 
 export default UI;

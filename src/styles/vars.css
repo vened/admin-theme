@@ -1,18 +1,27 @@
 :root {
-  font-size: 13px;
+  font-size:                          13px;
 
-  --header-height: 88px;
+  --header-height:                    88px;
 
-  --white: rgba(255, 255, 255, 1);
+  --white:                            rgba(255, 255, 255, 1);
 
-  --brand-primary: #1e202c;
-  --brand-primary-text-color: #fff;
+  --brand-primary:                    #1e202c;
+  --brand-primary-opacity-005:        rgba(30, 32, 44, .05);
+  --brand-primary-opacity-015:        rgba(30, 32, 44, .15);
+  --brand-primary-text-color:         #fff;
 
-  --brand-primary-lighten: #323544;
+  --brand-primary-lighten:            #323544;
   --brand-primary-lighten-text-color: #a1a5ba;
 
-  --brand-danger: #ea5a5a;
-  --brand-danger-text-color: #fef8f8;
+  --brand-danger:                     #ea5a5a;
+  --brand-danger-text-color:          #fef8f8;
 
-  --border-color: rgba(0, 0, 0, .2);
+  --border-color:                     rgba(0, 0, 0, .2);
+
+  --z-index-2000:                     2000;
+  --z-index-2001:                     2001;
+
+  --border-radius: 2px;
+
+  --indent: 16px;
 }

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Panels from '../../components/Bootstrap/Panels';
 import { setPage } from '../../store/Header/reducer';
 import { DatePicker } from 'antd';
 
@@ -14,7 +13,6 @@ class UiComponents extends PureComponent {
     return (
       <div>
         <DatePicker />
-        <Panels />
       </div>
     );
   }

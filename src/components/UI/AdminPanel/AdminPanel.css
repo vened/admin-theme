@@ -1,0 +1,20 @@
+@import "../../../styles/vars.css";
+
+.AdminPanel {
+  height: 100%;
+  margin: 0 0 var(--indent);
+  border: 1px solid var(--brand-primary-opacity-015);
+  border-radius: var(--border-radius);
+}
+
+.AdminPanelHeader {
+  padding: 10px var(--indent);
+  border-bottom: 1px solid var(--brand-primary-opacity-015);
+  background-color: var(--brand-primary-opacity-005);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.AdminPanelBody {
+  padding: var(--indent);
+}
