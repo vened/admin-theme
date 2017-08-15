@@ -16,14 +16,14 @@ class AdminHeader extends PureComponent {
   handleCollapsed = () => {
     if (this.props.collapsed) {
       this.props.siderUnCollapsed();
-    }else{
+    } else {
       this.props.siderCollapsed();
     }
   };
 
   render() {
     return (
-      <Header className="AdminHeader" style={{paddingLeft: this.props.collapsed ? this.props.siderWidth + 16 : '256px',}}>
+      <Header className="AdminHeader" style={{ paddingLeft: this.props.collapsed ? this.props.siderWidth + 16 : '256px' }}>
         <Icon
           type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
           onClick={this.handleCollapsed}

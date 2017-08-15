@@ -43,33 +43,25 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-export const siderCollapsed = () => {
-  return dispatch => {
-    dispatch({
-      type: SIDER_COLLAPSED,
-    });
-  };
+export const siderCollapsed = () => (dispatch) => {
+  dispatch({
+    type: SIDER_COLLAPSED,
+  });
 };
-export const siderUnCollapsed = () => {
-  return dispatch => {
-    dispatch({
-      type: SIDER_UN_COLLAPSED,
-    });
-  };
+export const siderUnCollapsed = () => (dispatch) => {
+  dispatch({
+    type: SIDER_UN_COLLAPSED,
+  });
 };
-export const collapsedBreakpoint = () => {
-  return dispatch => {
-    dispatch({
-      type: SIDER_COLLAPSED_BREAKPOINT,
-    });
-  };
+export const collapsedBreakpoint = () => (dispatch) => {
+  dispatch({
+    type: SIDER_COLLAPSED_BREAKPOINT,
+  });
 };
-export const unCollapsedBreakpoint = () => {
-  return dispatch => {
-    dispatch({
-      type: SIDER_UN_COLLAPSED_BREAKPOINT,
-    });
-  };
+export const unCollapsedBreakpoint = () => (dispatch) => {
+  dispatch({
+    type: SIDER_UN_COLLAPSED_BREAKPOINT,
+  });
 };

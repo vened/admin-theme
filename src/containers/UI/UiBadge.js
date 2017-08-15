@@ -60,12 +60,12 @@ class UiBadge extends PureComponent {
               <Row gutter={16}>
                 <Col span={6}>
                   <Badge count={5}>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
                 <Col span={6}>
                   <Badge count={4} showZero>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
               </Row>
@@ -80,22 +80,22 @@ class UiBadge extends PureComponent {
               <Row gutter={16}>
                 <Col span={6}>
                   <Badge count={99}>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
                 <Col span={6}>
                   <Badge count={100}>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
                 <Col span={6}>
                   <Badge count={99} overflowCount={10}>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
                 <Col span={6}>
                   <Badge count={1000} overflowCount={999}>
-                    <a href="#" className="head-example" />
+                    <span className="head-example" />
                   </Badge>
                 </Col>
               </Row>
@@ -113,8 +113,10 @@ class UiBadge extends PureComponent {
               </p>
               <div>
                 <Badge count={25} style={{ marginRight: 16 }} />
-                <Badge count={4}
-                       style={{ marginRight: 16, backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }} />
+                <Badge
+                  count={4}
+                  style={{ marginRight: 16, backgroundColor: '#fff', color: '#999', boxShadow: '0 0 0 1px #d9d9d9 inset' }}
+                />
                 <Badge count={109} style={{ backgroundColor: '#87d068' }} />
               </div>
             </Card>
@@ -130,7 +132,7 @@ class UiBadge extends PureComponent {
                   <Icon type="notification" />
                 </Badge>
                 <Badge dot>
-                  <a href="#" style={{ marginLeft: 30 }}>Link something</a>
+                  <a href="/ui/badge" style={{ marginLeft: 30 }}>Link something</a>
                 </Badge>
               </div>
             </Card>
@@ -147,7 +149,7 @@ class UiBadge extends PureComponent {
               </p>
               <div>
                 <Badge count={this.state.count}>
-                  <a href="#" className="head-example" />
+                  <span className="head-example" />
                 </Badge>
                 <ButtonGroup style={{ marginLeft: 30 }}>
                   <Button onClick={this.decline}>
@@ -160,7 +162,7 @@ class UiBadge extends PureComponent {
               </div>
               <div style={{ marginTop: 10 }}>
                 <Badge dot={this.state.show}>
-                  <a href="#" className="head-example" />
+                  <span className="head-example" />
                 </Badge>
                 <Switch
                   onChange={this.onChange}

@@ -14,13 +14,11 @@ export default (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-export const setPage = (payload) => {
-  return dispatch => {
-    dispatch({
-      type: SET_PAGE,
-      payload,
-    });
-  };
+export const setPage = payload => (dispatch) => {
+  dispatch({
+    type: SET_PAGE,
+    payload,
+  });
 };

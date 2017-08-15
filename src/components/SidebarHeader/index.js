@@ -5,7 +5,7 @@ import './sidebarHeader.css';
 function SidebarHeader() {
   return (
     <div className="SidebarHeader">
-        <Logo />
+      <Logo />
     </div>
   );
 }

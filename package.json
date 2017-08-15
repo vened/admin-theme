@@ -6,7 +6,9 @@
     "start-js": "node scripts/start.js",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "lint": "eslint -- ./src",
+    "lint:fix": "eslint --fix -- ./src"
   },
   "dependencies": {
     "antd": "^2.12.6",
@@ -67,8 +69,10 @@
   "devDependencies": {
     "babel-plugin-import": "^1.3.1",
     "enzyme": "^2.9.1",
+    "eslint-config-airbnb": "^15.1.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "prop-types": "^15.5.10",
     "react-test-renderer": "^15.6.1"
   },
   "jest": {
@@ -107,8 +111,5 @@
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }

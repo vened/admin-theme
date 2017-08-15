@@ -5,10 +5,6 @@ import { Breadcrumb, Icon } from 'antd';
 import './ContentHeading.css';
 
 class ContentHeading extends PureComponent {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="ContentHeading">

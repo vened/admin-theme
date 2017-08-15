@@ -5,7 +5,7 @@ import {
 import enUS from 'antd/lib/locale-provider/en_US';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { Provider, } from 'react-redux';
+import { Provider } from 'react-redux';
 import {
   Route,
   Switch,
@@ -29,7 +29,7 @@ class App extends PureComponent {
           <LocaleProvider locale={enUS}>
             <Layout style={{ minHeight: '100vh' }}>
               <AdminHeader />
-              <Layout style={{ 'flexDirection': 'row', overflowX: 'hidden' }}>
+              <Layout style={{ flexDirection: 'row', overflowX: 'hidden' }}>
                 <Sidebar />
                 <Layout style={{ height: '100vh' }}>
                   <Content style={{
@@ -37,7 +37,8 @@ class App extends PureComponent {
                     padding: '64px 0 0 0',
                     // background: '#fff',
                     overflow: 'auto',
-                  }}>
+                  }}
+                  >
                     <main style={{ padding: '16px' }}>
                       <ContentHeading />
                       <Switch>

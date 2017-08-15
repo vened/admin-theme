@@ -34,31 +34,27 @@ class Sidebar extends PureComponent {
         <NavLink
           to={menuItem.path}
         >
-          <FontAwesome name={menuItem.faIcon} />
+          {menuItem.faIcon && <FontAwesome name={menuItem.faIcon} />}
           <span>{menuItem.label}</span>
         </NavLink>
       </Menu.Item>
     );
   };
 
-  renderSubMenu = (item, key) => {
-    return (
-      <SubMenu
-        key={key}
-        title={<span><Icon type={item.faIcon} /><span>{item.label}</span></span>}
-      >
-        {item.children.map((subMenuItem, key) => this.renderMenuItem(subMenuItem, `sub-${key}`))}
-      </SubMenu>
+  renderSubMenu = (item, key) => (
+    <SubMenu
+      key={key}
+      title={<span><Icon type={item.faIcon} /><span>{item.label}</span></span>}
+    >
+      {item.children.map((subMenuItem, key) => this.renderMenuItem(subMenuItem, `sub-${key}`))}
+    </SubMenu>
     );
-  };
 
-  renderMenu = () => {
-    return (
-      <Menu theme="dark" mode="inline" onClick={this.handleClick}>
-        {navData.map((menuItem, key) => this.renderMenuItem(menuItem, key))}
-      </Menu>
+  renderMenu = () => (
+    <Menu theme="dark" mode="inline" onClick={this.handleClick}>
+      {navData.map((menuItem, key) => this.renderMenuItem(menuItem, key))}
+    </Menu>
     );
-  };
 
   handleCollapsed = (collapsed) => {
     if (collapsed) {
