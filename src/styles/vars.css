@@ -5,9 +5,10 @@
 
   --white:                            rgba(255, 255, 255, 1);
 
-  --brand-primary:                    #1e202c;
-  --brand-primary-opacity-005:        rgba(30, 32, 44, .05);
-  --brand-primary-opacity-015:        rgba(30, 32, 44, .15);
+  --brand-primary:                    rgba(28, 43, 54, 1);
+  --brand-primary-opacity-005:        rgba(28, 43, 54, .05);
+  --brand-primary-opacity-015:        rgba(28, 43, 54, .15);
+  --brand-primary-opacity-5:          rgba(28, 43, 54, .5);
   --brand-primary-text-color:         #fff;
 
   --brand-primary-lighten:            #323544;

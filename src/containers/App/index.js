@@ -11,6 +11,7 @@ import {
   Switch,
 } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
+import ContentHeading from '../../components/ContentHeading';
 import Sidebar from '../../components/Sidebar';
 import AdminHeader from '../../containers/AdminHeader';
 import Dashboard from '../../containers/Dashboard';
@@ -33,11 +34,12 @@ class App extends PureComponent {
                 <Layout style={{ height: '100vh' }}>
                   <Content style={{
                     margin: '0',
-                    padding: '70px 0 0 0',
-                    background: '#fff',
+                    padding: '64px 0 0 0',
+                    // background: '#fff',
                     overflow: 'auto',
                   }}>
-                    <main style={{padding: '16px'}}>
+                    <main style={{ padding: '16px' }}>
+                      <ContentHeading />
                       <Switch>
                         <Route exact path="/" component={Dashboard} />
                         <Route path="/ui" component={UI} />
