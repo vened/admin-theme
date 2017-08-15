@@ -1,5 +1,7 @@
 @import "../../styles/vars.css";
 
 .AdminSidebar{
+  left: 0;
+  min-height: 100%;
   z-index: var(--z-index-2001);
 }

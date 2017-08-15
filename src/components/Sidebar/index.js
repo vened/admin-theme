@@ -8,7 +8,12 @@ import React, { PureComponent } from 'react';
 import FontAwesome from 'react-fontawesome';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
 import navData from '../../navData';
+import {
+  collapsedBreakpoint,
+  unCollapsedBreakpoint,
+} from '../../store/Sider/reducer';
 import './sidebar.css';
 
 const SubMenu = Menu.SubMenu;
@@ -55,15 +60,24 @@ class Sidebar extends PureComponent {
     );
   };
 
+  handleCollapsed = (collapsed) => {
+    if (collapsed) {
+      this.props.collapsedBreakpoint();
+    } else {
+      this.props.unCollapsedBreakpoint();
+    }
+  };
+
   render() {
     return (
       <Sider
         className="AdminSidebar"
-        style={{ left: 0 }}
+        style={this.props.siderWidth === 0 && { position: 'fixed' }}
         width="240"
-        collapsedWidth="64"
+        breakpoint="sm"
+        collapsedWidth={this.props.siderWidth}
         trigger={null}
-        collapsible
+        onCollapse={this.handleCollapsed}
         collapsed={this.props.collapsed}
       >
         {this.renderMenu()}
@@ -74,12 +88,23 @@ class Sidebar extends PureComponent {
 
 Sidebar.propTypes = {
   collapsed: PropTypes.bool,
+  siderWidth: PropTypes.number,
+  collapsedBreakpoint: PropTypes.func,
+  unCollapsedBreakpoint: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   collapsed: state.Sider.collapsed,
+  siderWidth: state.Sider.siderWidth,
 });
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+  collapsedBreakpoint,
+  unCollapsedBreakpoint,
+}, dispatch);
+
 
 export default connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(Sidebar);
