@@ -9,6 +9,8 @@ import FontAwesome from 'react-fontawesome';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import shortid from 'shortid';
+import SidebarHeader from '../../components/SidebarHeader';
 import navData from '../../navData';
 import {
   collapsedBreakpoint,
@@ -21,16 +23,12 @@ const { Sider } = Layout;
 
 class Sidebar extends PureComponent {
 
-  handleClick = (e) => {
-    this.setState({ current: e.key });
-  };
-
-  renderMenuItem = (menuItem, key) => {
+  renderMenuItem = (menuItem) => {
     if (menuItem.children) {
-      return this.renderSubMenu(menuItem, key);
+      return this.renderSubMenu(menuItem);
     }
     return (
-      <Menu.Item key={key}>
+      <Menu.Item key={shortid.generate()}>
         <NavLink
           to={menuItem.path}
         >
@@ -41,20 +39,20 @@ class Sidebar extends PureComponent {
     );
   };
 
-  renderSubMenu = (item, key) => (
+  renderSubMenu = (item) => (
     <SubMenu
-      key={key}
+      key={shortid.generate()}
       title={<span><Icon type={item.faIcon} /><span>{item.label}</span></span>}
     >
-      {item.children.map((subMenuItem, key) => this.renderMenuItem(subMenuItem, `sub-${key}`))}
+      {item.children.map((subMenuItem) => this.renderMenuItem(subMenuItem))}
     </SubMenu>
-    );
+  );
 
   renderMenu = () => (
-    <Menu theme="dark" mode="inline" onClick={this.handleClick}>
-      {navData.map((menuItem, key) => this.renderMenuItem(menuItem, key))}
+    <Menu theme="dark" mode="inline">
+      {navData.map((menuItem) => this.renderMenuItem(menuItem))}
     </Menu>
-    );
+  );
 
   handleCollapsed = (collapsed) => {
     if (collapsed) {
@@ -76,6 +74,7 @@ class Sidebar extends PureComponent {
         onCollapse={this.handleCollapsed}
         collapsed={this.props.collapsed}
       >
+        <SidebarHeader />
         {this.renderMenu()}
       </Sider>
     );

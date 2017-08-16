@@ -1,11 +1,16 @@
 import React from 'react';
-import Logo from '../../components/Logo';
+import logo from './logo.svg';
 import './sidebarHeader.css';
 
 function SidebarHeader() {
   return (
     <div className="SidebarHeader">
-      <Logo />
+      <div className="Logo">
+        <img src={logo} className="Logo-img" alt="logo" />
+        <div className="Logo-slogan">
+          React Admin
+        </div>
+      </div>
     </div>
   );
 }
