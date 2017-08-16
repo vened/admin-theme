@@ -22,6 +22,10 @@ const navData = [
         path: '/ui/calendar',
       },
       {
+        label: 'Card',
+        path: '/ui/card',
+      },
+      {
         label: 'General',
         path: '/ui/general',
       },
