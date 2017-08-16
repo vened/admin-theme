@@ -11,8 +11,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { setPage } from '../../store/Header/reducer';
 
-const ButtonGroup = Button.Group;
-
 const UserList = [
   'U',
   'Lucy',

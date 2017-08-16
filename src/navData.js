@@ -18,6 +18,10 @@ const navData = [
         path: '/ui/badge',
       },
       {
+        label: 'Calendar',
+        path: '/ui/calendar',
+      },
+      {
         label: 'General',
         path: '/ui/general',
       },
