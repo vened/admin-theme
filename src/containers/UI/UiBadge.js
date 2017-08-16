@@ -104,7 +104,7 @@ class UiBadge extends PureComponent {
 
         </Row>
 
-        <Row gutter={16} align="normal" type="flex" style={{ margin: '0 0 16px' }}>
+        <Row gutter={16} align="normal" type="flex" style={{ marginBottom: '16px' }}>
 
           <Col xl={12} lg={12} md={12} sm={24} xs={24}>
             <Card title="Standalone">
@@ -140,7 +140,7 @@ class UiBadge extends PureComponent {
 
         </Row>
 
-        <Row gutter={16} align="normal" type="flex" style={{ margin: '0 0 16px' }}>
+        <Row gutter={16} align="normal" type="flex" style={{ marginBottom: '16px' }}>
 
           <Col xl={12} lg={12} md={12} sm={24} xs={24}>
             <Card title="Dynamic">

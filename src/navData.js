@@ -10,6 +10,10 @@ const navData = [
     faIcon: 'desktop',
     children: [
       {
+        label: 'Avatar',
+        path: '/ui/avatar',
+      },
+      {
         label: 'Badge',
         path: '/ui/badge',
       },
