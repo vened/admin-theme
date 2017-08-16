@@ -13,7 +13,7 @@ import {
 import { ConnectedRouter } from 'react-router-redux';
 import ContentHeading from '../../components/ContentHeading';
 import Sidebar from '../../components/Sidebar';
-import AdminHeader from '../../containers/AdminHeader';
+import AdminHeader from '../../components/AdminHeader';
 import Dashboard from '../../containers/Dashboard';
 import UI from '../../containers/UI';
 import store, { history } from '../../store';
