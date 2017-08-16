@@ -13,8 +13,8 @@ import shortid from 'shortid';
 import SidebarHeader from '../../components/SidebarHeader';
 import navData from '../../navData';
 import {
-  collapsedBreakpoint,
-  unCollapsedBreakpoint,
+  siderCollapsed,
+  siderUnCollapsed,
 } from '../../store/Sider/reducer';
 import './sidebar.css';
 
@@ -56,9 +56,9 @@ class Sidebar extends PureComponent {
 
   handleCollapsed = (collapsed) => {
     if (collapsed) {
-      this.props.collapsedBreakpoint();
+      this.props.siderCollapsed();
     } else {
-      this.props.unCollapsedBreakpoint();
+      !this.props.collapsedDefault && this.props.siderUnCollapsed();
     }
   };
 
@@ -71,6 +71,7 @@ class Sidebar extends PureComponent {
         breakpoint="sm"
         collapsedWidth={this.props.siderWidth}
         trigger={null}
+        collapsible={false}
         onCollapse={this.handleCollapsed}
         collapsed={this.props.collapsed}
       >
@@ -83,19 +84,21 @@ class Sidebar extends PureComponent {
 
 Sidebar.propTypes = {
   collapsed: PropTypes.bool,
+  collapsedDefault: PropTypes.bool,
   siderWidth: PropTypes.number,
-  collapsedBreakpoint: PropTypes.func,
-  unCollapsedBreakpoint: PropTypes.func,
+  siderCollapsed: PropTypes.func,
+  siderUnCollapsed: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   collapsed: state.Sider.collapsed,
+  collapsedDefault: state.Sider.collapsedDefault,
   siderWidth: state.Sider.siderWidth,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-  collapsedBreakpoint,
-  unCollapsedBreakpoint,
+  siderCollapsed,
+  siderUnCollapsed,
 }, dispatch);
 
 

@@ -1,7 +1,5 @@
 export const SIDER_COLLAPSED = 'app/SIDER_COLLAPSED';
 export const SIDER_UN_COLLAPSED = 'app/SIDER_UN_COLLAPSED';
-export const SIDER_COLLAPSED_BREAKPOINT = 'app/SIDER_COLLAPSED_BREAKPOINT';
-export const SIDER_UN_COLLAPSED_BREAKPOINT = 'app/SIDER_UN_COLLAPSED_BREAKPOINT';
 
 const siderWidth = () => {
   const windowWidth = window.innerWidth;
@@ -11,9 +9,17 @@ const siderWidth = () => {
   return 64;
 };
 
+const isCollapsed = () => {
+  const collapsed = window.localStorage.getItem('collapsed');
+  if(collapsed === 'true'){
+    return true
+  }
+  return false;
+}
+
 const initialState = {
-  collapsed: false,
-  collapsedIsBreakpoint: false,
+  collapsed: isCollapsed(),
+  collapsedDefault: isCollapsed(),
   siderWidth: siderWidth(),
 };
 
@@ -23,21 +29,13 @@ export default (state = initialState, action) => {
     case SIDER_COLLAPSED:
       return {
         collapsed: true,
+        collapsedDefault: false,
         siderWidth: siderWidth(),
       };
     case SIDER_UN_COLLAPSED:
       return {
         collapsed: false,
-        siderWidth: siderWidth(),
-      };
-    case SIDER_COLLAPSED_BREAKPOINT:
-      return {
-        collapsed: true,
-        siderWidth: siderWidth(),
-      };
-    case SIDER_UN_COLLAPSED_BREAKPOINT:
-      return {
-        collapsed: false,
+        collapsedDefault: false,
         siderWidth: siderWidth(),
       };
     default:
@@ -46,22 +44,14 @@ export default (state = initialState, action) => {
 };
 
 export const siderCollapsed = () => (dispatch) => {
+  window.localStorage.setItem('collapsed', true);
   dispatch({
     type: SIDER_COLLAPSED,
   });
 };
 export const siderUnCollapsed = () => (dispatch) => {
+  window.localStorage.setItem('collapsed', false);
   dispatch({
     type: SIDER_UN_COLLAPSED,
-  });
-};
-export const collapsedBreakpoint = () => (dispatch) => {
-  dispatch({
-    type: SIDER_COLLAPSED_BREAKPOINT,
-  });
-};
-export const unCollapsedBreakpoint = () => (dispatch) => {
-  dispatch({
-    type: SIDER_UN_COLLAPSED_BREAKPOINT,
   });
 };
