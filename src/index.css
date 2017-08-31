@@ -1,9 +1,15 @@
+@import "./styles/vars.css";
+
 body {
   margin: 0;
   padding: 0;
 }
 
-p{
+p {
   margin: 0;
   padding: 0;
+}
+
+h4 {
+  margin: var(--indent) 0;
 }

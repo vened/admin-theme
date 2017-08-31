@@ -34,7 +34,7 @@ class UiAvatar extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.setPage({ currentPage: 'UiAvatar' });
+    this.props.setPage({ currentPage: 'Avatar' });
   }
 
   changeUser = () => {

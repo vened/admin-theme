@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import UiAvatar from './UiAvatar';
 import UiBadge from './UiBadge';
+import UiButtons from './UiButtons';
 import UiCalendar from './UiCalendar';
 import UiCard from './UiCard';
 import UiBase from './UiBase';
@@ -16,6 +17,7 @@ const UI = () => (
     <Route exact path="/ui" component={UiBase} />
     <Route path="/ui/avatar" component={UiAvatar} />
     <Route path="/ui/badge" component={UiBadge} />
+    <Route path="/ui/buttons" component={UiButtons} />
     <Route path="/ui/calendar" component={UiCalendar} />
     <Route path="/ui/card" component={UiCard} />
     <Route path="/ui/components" component={UiComponents} />

@@ -26,7 +26,7 @@ class UiBadge extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.setPage({ currentPage: 'UiBadge' });
+    this.props.setPage({ currentPage: 'Badge' });
   }
 
   increase = () => {

@@ -6,7 +6,7 @@ import { DatePicker } from 'antd';
 
 class UiComponents extends PureComponent {
   componentDidMount() {
-    this.props.setPage({ currentPage: 'UiComponents' });
+    this.props.setPage({ currentPage: 'Components' });
   }
 
   render() {
