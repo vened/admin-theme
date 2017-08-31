@@ -1,0 +1,21 @@
+@import "../../styles/vars.css";
+
+.AdminUser {
+  display: flex;
+  align-items: center;
+}
+
+.AdminUserMenu {
+  margin:0 var(--indent);
+}
+
+.AdminUserNotification {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+}
+.AdminUserNotificationIcon{
+  margin-right: 4px;
+  font-size: 20px;
+  color: var(--brand-notify);
+}

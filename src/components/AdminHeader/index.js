@@ -6,7 +6,11 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { siderCollapsed, siderUnCollapsed } from '../../store/Sider/reducer';
+import AdminUser from '../../components/AdminUser';
+import {
+  siderCollapsed,
+  siderUnCollapsed,
+} from '../../store/Sider/reducer';
 import './Header.css';
 
 const { Header } = Layout;
@@ -24,11 +28,14 @@ class AdminHeader extends PureComponent {
   render() {
     return (
       <Header className="AdminHeader" style={{ paddingLeft: this.props.collapsed ? this.props.siderWidth + 16 : '256px' }}>
-        <Icon
-          type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
-          onClick={this.handleCollapsed}
-          style={{ fontSize: 16 }}
-        />
+        <section className="AdminHeaderInset">
+          <Icon
+            type={this.props.collapsed ? 'menu-unfold' : 'menu-fold'}
+            onClick={this.handleCollapsed}
+            style={{ fontSize: 16 }}
+          />
+          <AdminUser />
+        </section>
       </Header>
     );
   }
