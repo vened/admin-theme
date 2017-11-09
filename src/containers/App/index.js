@@ -16,6 +16,8 @@ import Sidebar from '../../components/Sidebar';
 import AdminHeader from '../../components/AdminHeader';
 import Dashboard from '../../containers/Dashboard';
 import UI from '../../containers/UI';
+import Crud from '../../containers/Crud';
+import crudResources from '../../crudResources';
 import store, { history } from '../../store';
 import './App.css';
 
@@ -43,6 +45,14 @@ class App extends PureComponent {
                       <ContentHeading />
                       <Switch>
                         <Route exact path="/" component={Dashboard} />
+
+                        {crudResources.map(item => {
+                          return (<Route
+                            path={`/crud/${item.name}`}
+                            render={() => <Crud resource={item.name} />}
+                          />);
+                        })}
+                        {/*<Route exact path="/crud/:resource" component={Crud} />*/}
                         <Route path="/ui" component={UI} />
                       </Switch>
                     </main>

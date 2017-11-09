@@ -5,6 +5,10 @@ const navData = [
     faIcon: 'home',
   },
   {
+    label: 'CRUD',
+    path: '/crud',
+  },
+  {
     label: 'UI',
     path: '/ui',
     faIcon: 'desktop',
