@@ -11,6 +11,7 @@ import UiCard from './UiCard';
 import UiCarousel from './UiCarousel';
 import UiCollapse from './UiCollapse';
 import UiPopover from './UiPopover';
+import UiTooltip from './UiTooltip';
 
 import UiBase from './UiBase';
 import UiComponents from './UiComponents';
@@ -27,6 +28,7 @@ const UI = () => (
     <Route path="/ui/carousel" component={UiCarousel} />
     <Route path="/ui/collapse" component={UiCollapse} />
     <Route path="/ui/popover" component={UiPopover} />
+    <Route path="/ui/tooltip" component={UiTooltip} />
     <Route path="/ui/components" component={UiComponents} />
   </Switch>
   );

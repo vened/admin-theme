@@ -5,7 +5,7 @@ const navData = [
     faIcon: 'home',
   },
   {
-    label: 'UI',
+    label: 'UI elements',
     path: '/ui',
     faIcon: 'desktop',
     children: [
@@ -41,6 +41,11 @@ const navData = [
         label: 'Popover',
         path: '/ui/popover',
       },
+      {
+        label: 'Tooltip',
+        path: '/ui/tooltip',
+      },
+
       {
         label: 'General',
         path: '/ui/general',
