@@ -8,6 +8,10 @@ import UiBadge from './UiBadge';
 import UiButtons from './UiButtons';
 import UiCalendar from './UiCalendar';
 import UiCard from './UiCard';
+import UiCarousel from './UiCarousel';
+import UiCollapse from './UiCollapse';
+import UiPopover from './UiPopover';
+
 import UiBase from './UiBase';
 import UiComponents from './UiComponents';
 import './ui.css';
@@ -20,6 +24,9 @@ const UI = () => (
     <Route path="/ui/buttons" component={UiButtons} />
     <Route path="/ui/calendar" component={UiCalendar} />
     <Route path="/ui/card" component={UiCard} />
+    <Route path="/ui/carousel" component={UiCarousel} />
+    <Route path="/ui/collapse" component={UiCollapse} />
+    <Route path="/ui/popover" component={UiPopover} />
     <Route path="/ui/components" component={UiComponents} />
   </Switch>
   );

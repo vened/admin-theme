@@ -30,6 +30,18 @@ const navData = [
         path: '/ui/card',
       },
       {
+        label: 'Carousel',
+        path: '/ui/carousel',
+      },
+      {
+        label: 'Collapse',
+        path: '/ui/collapse',
+      },
+      {
+        label: 'Popover',
+        path: '/ui/popover',
+      },
+      {
         label: 'General',
         path: '/ui/general',
       },
